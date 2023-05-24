@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.navbar {
+  width: 100%;
+  height: 10rem;
+  background-color: #000;
+  position: fixed;
+  top: -14rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: .2rem .2rem .2rem #000;
+  transition: top 0.4s;
+  /* transition: top .4 ; */
+  
+}
+
+.navbar.change{
+  top: 0;
+  transition: top .4s .2s;
+  
+}
+
+.navbar-link{
+  color: #aaa;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: color .3s;
+
+}
+.change .navbar-link{
+  opacity: 1;
+}
+
+.change .navbar-link:nth-child(1){
+  transition: opacity .4s .5s;
+}
+.change .navbar-link:nth-child(2){
+  transition: opacity .4s .6s;
+}
+.change .navbar-link:nth-child(3){
+  transition: opacity .4s .7s;
+}
+.change .navbar-link:nth-child(4){
+  transition: opacity .4s .8s;
+}
+.change .navbar-link:nth-child(5){
+  transition: opacity .4s .9s;
+}
+
+.navbar-link:hover{
+  color: #fff;
+  transition: color .3s;
+}
+
+.navbar-link i{
+  font-size: 4rem;
+}
+
+.navbar-link span{
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+.menu{
+  width: 4rem;
+  height: 6rem;
+  background-color: #000;
+  position: fixed;
+  top: 1rem;
+  left: 4rem;
+  border-radius: 30rem 30rem 15rem 15rem;
+  box-shadow: .1rem .1rem .1rem #000,-.1rem -.1rem .1rem #000;
+  cursor: pointer;
+transition: top .4s 0.2s;
+ 
+}
+
+.menu.change{
+top: 15rem;
+transition: top .4s ;
+}
+
+.menu::before{
+  content: "";
+  width: .3rem;
+  height: 15rem;
+  background-color: #000;
+  position: absolute;
+  top: -15rem;
+  left: calc(50% - 0.15rem);
+}
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-heading {
+  font-size: 8rem;
+  font-weight: 900;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+  text-align: center;
+}
+
+.section-1-icons i {
+  font-size: 25rem;
+  color: #a79a2d;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: transform 0.3s;
+}
+
+.section-1-icons i.change {
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 0.3s ease 0.3s;
+}
+
+.section-2 {
+  width: 100%;
+
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+  box-sizing: border-box;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.cards {
+  width: 21rem;
+  background-color: #a79a2d;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem #000;
+
+  position: relative;
+  transform: rotateY(20deg) skew(-2deg);
+  transition: transform 0.5s;
+}
+
+.cards:hover {
+  transform: rotateY(20deg) skew(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.cards::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #817824;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.cards::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #8f8317;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-name {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  margin: 1rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+
+.btn {
+  width: 100%;
+  background-color: #111;
+  color: #888;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.section-3 {
+  background-color: #333;
+  padding: 5rem 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.food-img {
+  width: 24vw;
+  height: 15vw;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+}
+
+.gallery-link {
+  position: relative;
+  margin: 4rem 1rem;
+}
+
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+    3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+  transition: all 0.5s;
+  filter: blur(0.5rem);
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.gallery-link::before {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  height: 80%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover::before {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 90%;
+  height: 0.2rem;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.gallery-link:hover::after {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.food-name {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  opacity: 1;
+  transition: opacity 1.5s 0.2s;
+}
+
+.food-description {
+  position: absolute;
+  bottom: 3vh;
+  left: 2rem;
+  width: 70%;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  transition: opacity 1s 1s;
+}
+
+.section-4 {
+  width: 100%;
+  height: 40vh;
+  background-color: #222;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: #eee;
+  letter-spacing: 0.1rem;
+  border-top: 0.1rem solid #888;
+  padding-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.section-4-text {
+  text-transform: uppercase;
+}
+
+.section-4-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #a79a2d;
+}
+
+.section-4-paragraph {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.input-form {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form-input {
+  width: 35rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 0.2rem solid #a79a2d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #a79a2d;
+}
+
+.signup-form-input::placeholder {
+  color: #a79a2d;
+}
+
+.signup-form-btn {
+  position: relative;
+  left: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  color: #a79a2d;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+
+
+@media(max-width:768px){
+ .cards-container{
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .cards{
+  margin: 5rem;
+ }
+
+ .section-4{
+  height: 30vh;
+ }
+ 
+}
+
+@media(max-width:705px){
+  .navbar-link{
+    margin: 2rem;
+  }
+  .navbar-link i{
+    font-size: 4rem;
+  }
+  .navbar-link span{
+    font-size: 2rem;
+  }
+}
+
+
+@media(max-width:590px){
+  .navbar-link{
+    margin: 1rem;
+  }
+  .navbar-link i{
+    font-size: 2rem;
+  }
+  .navbar-link span{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:500px){
+  .section-heading{
+    font-size: 4rem;
+  }
+}
+
+@media(max-width:680px){
+  .section-4{
+    height: 40rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .section-4-text{
+    margin-bottom: 8rem;
+  }
+}
